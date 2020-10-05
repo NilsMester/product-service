@@ -23,7 +23,7 @@ public class ProductController {
     }
 
     @GetMapping
-    public List<Product> getProducts(@RequestParam(name="q") String searchParam){
+    public List<Product> getProducts(@RequestParam(name="q", required = false) String searchParam){
         return productService.list(searchParam);
     }
 
